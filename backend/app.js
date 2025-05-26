@@ -95,7 +95,7 @@ mongoose.connect(
       console.error(err);
     } else {
       console.log('Spojen sa MONGODB');
-      app.listen(80);
+      app.listen(5000, '0.0.0.0');
     }
   }
 );
