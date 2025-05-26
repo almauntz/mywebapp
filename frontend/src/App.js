@@ -14,7 +14,7 @@ function App() {
       setIsLoading(true);
 
       try {
-        const response = await fetch('${process.env.REACT_APP_API_URL}/goals');
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/goals`);
 
         const resData = await response.json();
 
@@ -39,7 +39,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('${process.env.REACT_APP_API_URL}/goals', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/goals`, {
         method: 'POST',
         body: JSON.stringify({
           text: goalText,
@@ -78,7 +78,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('${process.env.REACT_APP_API_URL}/goals/' + goalId, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/goals/` + goalId, {
         method: 'DELETE',
       });
 
